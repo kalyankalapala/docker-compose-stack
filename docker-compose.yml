@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  node:
+    container_name: shark-node
+    image: kalyankalapala/shark:alpine
+    restart: always
+    ports:
+      - 50:8080
+  nginx:
+    container_name: nginx
+    image: kalyankalapala/nginx
+    restart: always
+    ports:
+      - 60:8080
+  ghost:
+    container_name: ghost
+    image: kalyankalapala/ghost
+    restart: always
+    ports:
+      - 2368:2368
